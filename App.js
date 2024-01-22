@@ -17,9 +17,9 @@ export default function App() {
     
       <NavigationContainer>
         <Tab.Navigator>
-          <Tab.Screen name="Home" component={HomeScreen} options={{headerShown: false, tabBarIcon: ({ color, size }) => (<Ionicons name="person" color={color} size={size} />),}}/>
-          <Tab.Screen name="Movies" component={MovieScreen} options={{headerShown: false, tabBarIcon: ({ color, size }) => (<Ionicons name="map" color={color} size={size} />),}}/>
-          <Tab.Screen name="Flags" component={FlagScreen} options={{headerShown: false, tabBarIcon: ({ color, size }) => (<Ionicons name="map" color={color} size={size} />),}}/>
+          <Tab.Screen name="Home" component={HomeScreen} options={{headerShown: false, tabBarIcon: ({ color, size }) => (<Ionicons name="home" color={color} size={size} />),}}/>
+          <Tab.Screen name="Movies" component={MovieScreen} options={{headerShown: false, tabBarIcon: ({ color, size }) => (<Ionicons name="videocam" color={color} size={size} />),}}/>
+          <Tab.Screen name="Flags" component={FlagScreen} options={{headerShown: false, tabBarIcon: ({ color, size }) => (<Ionicons name="flag" color={color} size={size} />),}}/>
         </Tab.Navigator>
       </NavigationContainer>
   );
