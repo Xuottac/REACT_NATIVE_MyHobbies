@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, SafeAreaView, FlatList } from 'react-native';
 import Card from '../components/Cards';
 
 
-const MovieScreen = () => {
+const FlagScreen = () => {
   const [img, setImg] = useState('');
   const [titre, setTitre] = useState('');
   const [année, setAnnée] = useState('');
@@ -42,15 +42,15 @@ const MovieScreen = () => {
                     <Text style={styles.Text}>Liste des Pays</Text>
                     <FlatList
                     data={data}
-                    renderItem={({ item }) => <Card img={"https://image.tmdb.org/t/p/w500" + item.flags['png']} titre={item.name}  pop={item.population} />}
-                    keyExtractor={(item) => item.alpha3Code.toString()} // Assuming item.id is a number
+                    renderItem={({ item }) => <Card img={item.flags['png']} titre={item.name}  pop={item.population} />}
+                    keyExtractor={(item) => item.alpha3Code} // Assuming item.id is a number
                 />
                 </View>
             )}
     </SafeAreaView>
   );
 };
-export default MovieScreen;
+export default FlagScreen;
 
 
 const styles = StyleSheet.create({
